@@ -6,7 +6,7 @@ namespace ConsoleApp3Directory
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             do
             {

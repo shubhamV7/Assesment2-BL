@@ -5,7 +5,7 @@ namespace ConsoleApp4Buffer
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             do
             {

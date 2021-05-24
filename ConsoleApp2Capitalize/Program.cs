@@ -5,7 +5,7 @@ namespace ConsoleApp2Capitalize
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             string[] ignore = { "and", "or", "but", "nor", "yet", "so", "for", "a",
                 "an", "the", "in", "to", "of", "at", "by", "up", "for", "off", "on" };
