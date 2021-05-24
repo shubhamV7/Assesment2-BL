@@ -6,7 +6,7 @@ namespace ConsoleApp3Directory
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             do
             {
@@ -68,7 +68,7 @@ namespace ConsoleApp3Directory
         /// <remarks>In Output <br/>
         ///  '-' means it is a file and <br/>
         ///  '--' means it is a directory</remarks>
-        public static void ShowDirInfo(DirectoryInfo dirInfo, string dirDepth, List<string> inaccessibleDirs)
+        private static void ShowDirInfo(DirectoryInfo dirInfo, string dirDepth, List<string> inaccessibleDirs)
         {
             try
             {
@@ -103,7 +103,7 @@ namespace ConsoleApp3Directory
         /// Method to take and validate choice inputs (y/n)
         /// </summary>
         /// <returns>char either 'y' or 'n'</returns>
-        internal static char InputChoice()
+        private static char InputChoice()
         {
             char ch;
             do

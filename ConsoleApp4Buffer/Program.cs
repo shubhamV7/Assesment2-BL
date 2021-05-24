@@ -5,7 +5,7 @@ namespace ConsoleApp4Buffer
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             do
             {
@@ -94,7 +94,7 @@ namespace ConsoleApp4Buffer
         /// Method to take buffer size input from console
         /// </summary>
         /// <returns>integer value of buffer size</returns>
-        internal static int TakeBufferInput()
+        private static int TakeBufferInput()
         {
             int bSize;
 
@@ -126,7 +126,7 @@ namespace ConsoleApp4Buffer
         /// Method to take and validate choice inputs (y/n)
         /// </summary>
         /// <returns>char either 'y' or 'n'</returns>
-        internal static char InputChoice()
+        private static char InputChoice()
         {
             char ch;
             do

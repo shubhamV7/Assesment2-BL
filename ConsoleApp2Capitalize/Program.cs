@@ -5,7 +5,7 @@ namespace ConsoleApp2Capitalize
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             string[] ignore = { "and", "or", "but", "nor", "yet", "so", "for", "a",
                 "an", "the", "in", "to", "of", "at", "by", "up", "for", "off", "on" };
@@ -39,7 +39,7 @@ namespace ConsoleApp2Capitalize
         /// Method to take and validate choice inputs (y/n)
         /// </summary>
         /// <returns>char either 'y' or 'n'</returns>
-        internal static char InputChoice()
+        private static char InputChoice()
         {
             char ch;
 

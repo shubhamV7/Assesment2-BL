@@ -5,7 +5,7 @@ namespace ConsoleApp1Dates
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             do
             {
@@ -41,7 +41,7 @@ namespace ConsoleApp1Dates
         /// This Method takes input from the user in (yyyy-mm-dd) format until valid 'From date' is entered
         /// </summary>
         /// <returns>Valid DateTime object</returns>
-        internal static DateTime InputFromDate()
+        private static DateTime InputFromDate()
         {
             DateTime fDate;
             do
@@ -73,7 +73,7 @@ namespace ConsoleApp1Dates
         /// </summary>
         /// <param name="fromDate">'From date' object is required to validate the 'To date'</param>
         /// <returns>Valid DateTime object</returns>
-        internal static DateTime InputToDate(DateTime fromDate)
+        private static DateTime InputToDate(DateTime fromDate)
         {
             DateTime tDate;
             do
@@ -104,7 +104,7 @@ namespace ConsoleApp1Dates
         /// Method to take and validate choice inputs (y/n)
         /// </summary>
         /// <returns>char either 'y' or 'n'</returns>
-        internal static char InputChoice()
+        private static char InputChoice()
         {
             char ch;
             do
