@@ -9,10 +9,15 @@ namespace ConsoleApp1Dates
         {
             do
             {
+                Program pgrm = new Program();
+
                 Console.WriteLine("Valid date formats (yyyy-mm-dd) Or (yyyy/mm/dd)");
 
-                DateTime fromDate = InputFromDate();
-                DateTime toDate = InputToDate(fromDate);
+                DateTime fromDate = pgrm.InputFromDate();
+
+                DateTime toDate = pgrm.InputToDate(fromDate);
+
+                //Console.WriteLine(fromDate);
 
                 //Calculating total days between the fromDate and toDate
                 int days = toDate.Subtract(fromDate).Days;
@@ -41,9 +46,10 @@ namespace ConsoleApp1Dates
         /// This Method takes input from the user in (yyyy-mm-dd) format until valid 'From date' is entered
         /// </summary>
         /// <returns>Valid DateTime object</returns>
-        private static DateTime InputFromDate()
+        private DateTime InputFromDate()
         {
-            DateTime fDate;
+            DateTime fDate = DateTime.Now;
+
             do
             {
                 Console.Write("\nEnter FROM Date: ");
@@ -67,13 +73,14 @@ namespace ConsoleApp1Dates
             return fDate;
         }
 
+
         /// <summary>
         /// This Method takes input from the user in (yyyy-mm-dd) until valid 'To date' is entered
         /// valid ToDate is -> when 'To Date' is greater than or equal to 'From Date'
         /// </summary>
         /// <param name="fromDate">'From date' object is required to validate the 'To date'</param>
         /// <returns>Valid DateTime object</returns>
-        private static DateTime InputToDate(DateTime fromDate)
+        private DateTime InputToDate(DateTime fromDate)
         {
             DateTime tDate;
             do

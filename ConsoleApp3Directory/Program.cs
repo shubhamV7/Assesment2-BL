@@ -15,7 +15,11 @@ namespace ConsoleApp3Directory
                 Console.WriteLine("\nEnter Directory Path : ");
                 string dirPath = Console.ReadLine();
 
-                if (!string.IsNullOrEmpty(dirPath.Trim()))
+                if (string.IsNullOrEmpty(dirPath.Trim()))
+                {
+                    Console.WriteLine("Directory path can not be empty or whitespaces, try again\n");
+                }
+                else
                 {
                     DirectoryInfo dirInfo = new DirectoryInfo(dirPath.Trim());
 
@@ -24,6 +28,7 @@ namespace ConsoleApp3Directory
                     if (dirInfo.Exists)
                     {
                         Console.WriteLine("");
+
                         ShowDirInfo(dirInfo, "", inaccessibleDirs);
 
                         //printing inaccessible directories path
@@ -50,10 +55,6 @@ namespace ConsoleApp3Directory
                         Console.WriteLine("\nExiting...");
                         break;
                     }
-                }
-                else
-                {
-                    Console.WriteLine("Directory path can not be empty or whitespaces, try again\n");
                 }
             } while (true);
         }
@@ -96,6 +97,10 @@ namespace ConsoleApp3Directory
             {
                 Console.WriteLine(uExc.Message);
                 inaccessibleDirs.Add(dirInfo.FullName);
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
             }
         }
 

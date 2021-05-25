@@ -9,12 +9,14 @@ namespace ConsoleApp4Buffer
         {
             do
             {
-                int bufferSize = TakeBufferInput();
+                Program pgrm = new Program();
+
+                int bufferSize = pgrm.TakeBufferInput();
 
                 DataStoreHelper dsHelper = new DataStoreHelper(bufferSize);
 
                 //calling function to take input and store it
-                TakeInputs(dsHelper);
+                pgrm.TakeInputs(dsHelper);
 
                 Console.WriteLine("\n\nDo you want to use again ? (y/n)");
                 char ch = InputChoice();
@@ -30,7 +32,7 @@ namespace ConsoleApp4Buffer
         /// Method to take input from console and store the input into buffer
         /// </summary>
         /// <param name="dsHelper">Object of DataStoreHelper</param>
-        private static void TakeInputs(DataStoreHelper dsHelper)
+        private void TakeInputs(DataStoreHelper dsHelper)
         {
             Console.WriteLine("Ënter string values one by one (Enter ? anytime to print all values)");
             while (true)
@@ -79,7 +81,7 @@ namespace ConsoleApp4Buffer
         /// Method to print all values that are present in the buffer
         /// </summary>
         /// <param name="dsHelper">Object of DataStoreHelper</param>
-        private static void PrintAllValues(DataStoreHelper dsHelper)
+        private void PrintAllValues(DataStoreHelper dsHelper)
         {
             Console.WriteLine("\n");
             Console.WriteLine("All values : \n");
@@ -94,7 +96,7 @@ namespace ConsoleApp4Buffer
         /// Method to take buffer size input from console
         /// </summary>
         /// <returns>integer value of buffer size</returns>
-        private static int TakeBufferInput()
+        private int TakeBufferInput()
         {
             int bSize;
 

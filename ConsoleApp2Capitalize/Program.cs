@@ -15,14 +15,14 @@ namespace ConsoleApp2Capitalize
                 Console.WriteLine("Enter Sentence : ");
                 string str = Console.ReadLine();
 
-                if (!string.IsNullOrEmpty(str))
+                if (string.IsNullOrEmpty(str))
                 {
-                    Console.WriteLine("\nOutput String : ");
-                    Console.WriteLine(StringHelper.CapitaliseFirstLetter(str, ignore));
+                    Console.WriteLine("You have entered an empty string ");
                 }
                 else
                 {
-                    Console.WriteLine("You have entered an empty string ");
+                    Console.WriteLine("\nOutput String : ");
+                    Console.WriteLine(StringHelper.CapitaliseFirstLetter(str, ignore));
                 }
 
                 Console.WriteLine("\n\nDo you want to use again ? (y/n)");
