@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -8,12 +9,12 @@ namespace Assesment2_BL_StringHelper
     {
         /// <summary>
         /// This Method accept a sentence as an argument 'input' and then captialize first character of each word
-        /// leaving the words present in 'ignore' string array
+        /// leaving the words present in 'ignore' HashSet<string>
         /// </summary>
         /// <param name="input"> input string</param>
-        /// <param name="ignore"> string array of words that one wants to ignore during capitalisation</param>
+        /// <param name="ignore"> HashSet<string> of words that one wants to ignore during capitalisation</param>
         /// <returns>sentence after processing as a string</returns>
-        public static string CapitaliseFirstLetter(string input, string[] ignore)
+        public static string CapitaliseFirstLetter(string input, HashSet<string> ignore)
         {
             string[] inputArray = input.Split(' ');
             StringBuilder output = new StringBuilder();

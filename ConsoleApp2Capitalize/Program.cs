@@ -1,5 +1,6 @@
 ﻿using Assesment2_BL_StringHelper;
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp2Capitalize
 {
@@ -7,7 +8,7 @@ namespace ConsoleApp2Capitalize
     {
         private static void Main(string[] args)
         {
-            string[] ignore = { "and", "or", "but", "nor", "yet", "so", "for", "a",
+            HashSet<string> ignore = new HashSet<string>(){ "and", "or", "but", "nor", "yet", "so", "for", "a",
                 "an", "the", "in", "to", "of", "at", "by", "up", "for", "off", "on" };
 
             do
