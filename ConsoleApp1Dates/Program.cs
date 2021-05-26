@@ -5,7 +5,7 @@ namespace ConsoleApp1Dates
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             do
             {
@@ -16,8 +16,6 @@ namespace ConsoleApp1Dates
                 DateTime fromDate = pgrm.InputFromDate();
 
                 DateTime toDate = pgrm.InputToDate(fromDate);
-
-                //Console.WriteLine(fromDate);
 
                 //Calculating total days between the fromDate and toDate
                 int days = toDate.Subtract(fromDate).Days;
@@ -72,7 +70,6 @@ namespace ConsoleApp1Dates
 
             return fDate;
         }
-
 
         /// <summary>
         /// This Method takes input from the user in (yyyy-mm-dd) until valid 'To date' is entered
